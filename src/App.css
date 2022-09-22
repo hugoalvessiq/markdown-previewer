@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+:root {
+  --color-1: #034a66;
+  --color-2: #b8ebff;
+  --color-3: #07a6e6;
+  --color-4: #2d657a;
+  --color-5: #0583b5;
+  --white: #fff;
+  --gradient: linear-gradient(
+    180deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+
+  --font-title: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-input: "Ubuntu", sans-serif;
+
+  --border-radius: 10px;
+  --letter-spacing: 0.07em;
+
+  --shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: var(--gradient);
+  height: 97vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.main--title {
+  max-width: 400px;
+  margin: 0.8em auto;
+  padding: 0.8em;
+  font-size: 1.5rem;
+  font-family: var(--font-title);
+  border-radius: var(--border-radius);
+  color: var(--white);
+  text-align: center;
+  background-color: var(--color-1);
+  letter-spacing: var(--letter-spacing);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subtitle {
+  font-family: var(--font-title);
+  text-align: center;
+  margin: auto;
+  padding: 0.7em;
+  font-size: 1.1em;
+  color: var(--white);
+  background-color: var(--color-1);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  letter-spacing: var(--letter-spacing);
+}
+
+.inputStyle {
+  width: 45vw;
+  height: 70vh;
+  background-color: var(--white);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  font-family: var(--font-input);
+  font-size: 1em;
+  box-shadow: var(--shadow);
+}
+
+.outputStyle {
+  background-color: var(--color-2);
+  padding: 1.5em;
+
+}
+
+img {
+  display: block;
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+textarea {
+  width: 99%;
+  min-height: 200px;
+  margin-bottom: -5px;
+  resize: vertical;
+  outline: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 0.875rem;
+  border: none;
 }
