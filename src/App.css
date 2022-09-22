@@ -31,17 +31,18 @@
 
 body {
   background: var(--gradient);
-  height: 97vh;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
+  height: 100%;
 }
 
 .main--title {
   max-width: 400px;
   margin: 0.8em auto;
+  margin-bottom: 2.2em;
   padding: 0.8em;
   font-size: 1.5rem;
   font-family: var(--font-title);
@@ -71,6 +72,7 @@ body {
   background-color: var(--white);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2em;
   padding: 1.5em;
   overflow-y: scroll;
   overflow-x: scroll;
@@ -101,4 +103,24 @@ textarea {
   padding-top: 5px;
   font-size: 0.875rem;
   border: none;
+}
+
+@media screen and (max-width: 800px){
+
+ 
+  .container {
+    display: block;
+    width: 90vw;
+    margin: auto;
+    height: auto;
+  }
+
+  .inputStyle {
+    width: 90vw;
+    margin-bottom: 2em;
+  }
+
+  .mark-input {
+    margin-bottom: 2em;
+  }
 }
